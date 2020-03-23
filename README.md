@@ -20,6 +20,10 @@ NodeJS API service that return the user stats about their purchases against the 
 - The API documentation is available on api-documentation.txt in this repository.
   
 
+# Tests
+  
+  * To run the tests run "npm run test"
+  
 # Features
 
 * GET /userstats/:userid - Given user stats
