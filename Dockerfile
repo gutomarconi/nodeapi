@@ -4,4 +4,5 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 EXPOSE 3008
+CMD ["npm", "run", "test"]
 CMD ["npm", "run", "start"]

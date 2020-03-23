@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6f13ba7-5a66-475e-8697-4daf2cec7edd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/userStats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/userStats.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/userStats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/userStats.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/controllers/userController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/controllers/userController.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/db/pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/db/pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/db/pool.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/db/pool.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/models/transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/models/transactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/models/transactions.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/models/transactions.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/models/userStats.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/models/userStats.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/services/userStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/services/userStats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app/services/userStats.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/services/userStats.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/startDocker.bat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +52,7 @@
       <updated>1584894707997</updated>
       <workItem from="1584894709223" duration="9397000" />
       <workItem from="1584923070456" duration="741000" />
-      <workItem from="1584963431032" duration="353000" />
+      <workItem from="1584963431032" duration="1396000" />
     </task>
     <servers />
   </component>

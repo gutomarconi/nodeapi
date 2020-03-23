@@ -6,17 +6,19 @@ NodeJS API service that expose an endpoint to get users purchases stats
 
 # Setup
 
-* Running with NPM locally
-    * Clone this repository 
-    * Open a command line prompt and execute:
-    * Run 'npm install'
-    * Run 'npm run start'
+* Clone this repository 
+* Open a command line prompt and execute:
+    * Running with NPM locally
+        * Run 'npm install'
+        * Run 'npm run test'
+        * Run 'npm run start'
+    * Spinning up a docker container
+        * Assuming that you already have docker available:
+        * Run docker-compose up 
 
-* Spinning up a docker container
-    * Assuming that you already have docker available just run     
-
+# General Information
 - By default the service will be running at port 3008.
-- The root url will be http://localhost:3008/api
+- The root url is http://localhost:3008/api
 - There is a SQL database with almost 700 users, 2,000 merchants and 10,000 transactions linked to this service with no need for configuration.
 - There are two main options to execute the service:
   1. Through the web browser
@@ -25,7 +27,7 @@ NodeJS API service that expose an endpoint to get users purchases stats
   
 
 # Unit Tests
-  
+  * Running through docker all tests are performed before start the service
   * To run the tests run "npm run test"
   
 # Features
