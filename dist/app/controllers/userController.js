@@ -23,11 +23,10 @@ const query_js_1 = __importDefault(require("../db/query.js"));
 const getAll = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const rows = yield query_js_1.default.execute('SELECT * FROM public.user');
-        const dbResponse = rows;
-        if (!dbResponse[0]) {
+        if (!rows[0]) {
             return res.status(404).send('There are no users');
         }
-        return res.status(200).send(dbResponse);
+        return res.status(200).send(rows);
     }
     catch (error) {
         return res.status(500).send('Request Failed');
@@ -43,7 +42,7 @@ exports.getAll = getAll;
  */
 const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const rows = yield query_js_1.default.execute('SELECT * FROM public.user WHERE id =' + req.params.id);
+        const rows = yield query_js_1.default.execute('SELECT * FROM public.user WHERE id = ' + req.params.id);
         if (!rows[0]) {
             return res.status(404).send('The user was not found!');
         }

@@ -39,7 +39,6 @@ function dateFilter(startDate, endDate) {
     }
     return filter;
 }
-;
 /**
  * Constant with Group by clause for query the DB
  *

@@ -12,13 +12,11 @@ const userStats_1 = require("../models/userStats");
 const getUserStats = (req, res) => {
     try {
         transactions_1.getTransactionsByUser(req)
-            .then((response) => response)
             .then((transactions) => {
             if (transactions.length > 0) {
                 userStats_1.getHistory(transactions, req)
                     .then((stats) => {
-                    console.log(stats);
-                    res.send(stats);
+                    res.status(200).send(stats);
                 });
             }
             else {

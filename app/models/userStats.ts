@@ -1,5 +1,5 @@
 import { getGeneralTransactions } from "./transactions";
-import { IPurchases, userStats } from "../types/types";
+import { IPurchases, IUserStats } from "../types/types";
 
 /**
  * Get history of purchases with comparision between the given user and all others.
@@ -42,7 +42,7 @@ const getMerchantsIds = (purchases: IPurchases[]): number[] => {
  * @param othersPurchases
  * @returns {[]}
  */
-const generate = (userPurchases: IPurchases[], othersPurchases: IPurchases[]): userStats[] => {
+const generate = (userPurchases: IPurchases[], othersPurchases: IPurchases[]): IUserStats[] => {
     let result = [];
     userPurchases.map((transaction) => {
         const average: number = getAverageSpent(othersPurchases, transaction.merchant_id);

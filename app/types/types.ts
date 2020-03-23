@@ -3,7 +3,7 @@ export interface IPurchases {
     amount: string
 }
 
-export interface userStats {
+export interface IUserStats {
     merchantId: number,
     userSpent: number,
     generalAverage: number,

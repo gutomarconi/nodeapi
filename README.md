@@ -2,17 +2,21 @@
 
 Node API exercise
 
-NodeJS API service that return the user stats about their purchases against the others users purchases for the same merchants.
+NodeJS API service that expose an endpoint to get users purchases stats 
 
 # Setup
 
-* Clone this repository 
-* Open a command line prompt and execute:
-* Run 'npm install'
-* Run 'npm run start'
+* Running with NPM locally
+    * Clone this repository 
+    * Open a command line prompt and execute:
+    * Run 'npm install'
+    * Run 'npm run start'
+
+* Spinning up a docker container
+    * Assuming that you already have docker available just run     
 
 - By default the service will be running at port 3008.
-- The service will be live on http://localhost:3008/api
+- The root url will be http://localhost:3008/api
 - There is a SQL database with almost 700 users, 2,000 merchants and 10,000 transactions linked to this service with no need for configuration.
 - There are two main options to execute the service:
   1. Through the web browser
@@ -20,7 +24,7 @@ NodeJS API service that return the user stats about their purchases against the 
 - The API documentation is available on api-documentation.txt in this repository.
   
 
-# Tests
+# Unit Tests
   
   * To run the tests run "npm run test"
   

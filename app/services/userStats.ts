@@ -1,6 +1,6 @@
 import { getTransactionsByUser } from "../models/transactions";
 import { getHistory } from "../models/userStats";
-import {userPurchase, userStats} from "../types/types";
+import { IPurchases, IUserStats } from "../types/types";
 
 /**
  * Get transactions by the user and built the stats
@@ -12,10 +12,10 @@ import {userPurchase, userStats} from "../types/types";
 const getUserStats = (req, res) => {
     try {
         getTransactionsByUser(req)
-        .then((transactions: userPurchase[]) => {
+        .then((transactions: IPurchases[]) => {
             if (transactions.length > 0) {
                 getHistory(transactions, req)
-                .then((stats: userStats[]) => {
+                .then((stats: IUserStats[]) => {
                     res.status(200).send(stats);
                 })
             } else {

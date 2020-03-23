@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pg_1 = require("pg");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const databaseConfig = { connectionString: process.env.DATABASE_URL };
-const pool = new pg_1.Pool(databaseConfig);
+const pool = new pg_1.Pool({
+    connectionString: process.env.DATABASE_URL
+});
 exports.default = pool;
 //# sourceMappingURL=pool.js.map
