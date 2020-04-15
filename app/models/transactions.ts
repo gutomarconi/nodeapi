@@ -1,4 +1,5 @@
 import query from "../db/query.js";
+import { IPurchases } from "../types/types"
 
 /**
  * Constant with From Clause for query the DB
@@ -39,9 +40,10 @@ const groupBy: string = "GROUP BY merchant_id";
  * Get transactions by user
  *
  * @param request
- * @returns {Promise<string|*>}
+ *
+ * @returns {Promise<IPurchases[]>}
  */
-const getTransactionsByUser = async (request) => {
+const getTransactionsByUser = async (request): Promise<IPurchases[]> => {
     try {
         const rows = await query.execute(
             "SELECT merchant_id, sum(amount) as amount " +
@@ -63,14 +65,15 @@ const getTransactionsByUser = async (request) => {
  * @param merchantsIds
  * @param startDate
  * @param endDate
- * @returns {Promise<string|*>}
+ *
+ * @returns {Promise<IPurchases[]>}
  */
 const getGeneralTransactions = async (
     userId: number,
     merchantsIds: number[],
     startDate: string,
     endDate: string
-) => {
+): Promise<IPurchases[]> => {
     try {
         const rows = await query.execute(
             "SELECT merchant_id, (sum(amount) / count(user_id)) as amount " +

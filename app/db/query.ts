@@ -8,7 +8,7 @@ export default {
      *
      * @returns {object} object
      */
-    execute(query: string): Promise<unknown> {
+    execute(query: string): Promise<any> {
         return new Promise((resolve, reject) => {
             pool.query(query)
                 .then((res) => {

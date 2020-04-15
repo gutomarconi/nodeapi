@@ -19,9 +19,8 @@ const transactions_1 = require("./transactions");
  */
 const getHistory = (userPurchases, request) => __awaiter(void 0, void 0, void 0, function* () {
     const merchantsIds = getMerchantsIds(userPurchases);
-    return yield transactions_1.getGeneralTransactions(request.params.id, merchantsIds, request.query.startDate, request.query.endDate).then((othersPurchases) => {
-        return generate(userPurchases, othersPurchases);
-    });
+    const othersPurchases = yield transactions_1.getGeneralTransactions(request.params.id, merchantsIds, request.query.startDate, request.query.endDate);
+    return generate(userPurchases, othersPurchases);
 });
 exports.getHistory = getHistory;
 /**
@@ -43,6 +42,7 @@ const getMerchantsIds = (purchases) => {
  *
  * @param userPurchases
  * @param othersPurchases
+ *
  * @returns {[]}
  */
 const generate = (userPurchases, othersPurchases) => {
@@ -80,6 +80,7 @@ const getAverageSpent = (othersPurchases, merchantId) => {
  *
  * @param userAmount
  * @param average
+ *
  * @returns {string|number}
  */
 const getPercentile = (userAmount, average) => {

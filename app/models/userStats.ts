@@ -10,14 +10,13 @@ import { IPurchases, IUserStats } from "../types/types";
  */
 const getHistory = async (userPurchases: IPurchases[], request) => {
     const merchantsIds = getMerchantsIds(userPurchases);
-    return await getGeneralTransactions(
+    const othersPurchases: IPurchases[] = await getGeneralTransactions(
         request.params.id,
         merchantsIds,
         request.query.startDate,
         request.query.endDate,
-    ).then((othersPurchases: IPurchases[]) => {
-        return generate(userPurchases, othersPurchases);
-    });
+    );
+    return generate(userPurchases, othersPurchases);
 };
 
 /**
@@ -40,6 +39,7 @@ const getMerchantsIds = (purchases: IPurchases[]): number[] => {
  *
  * @param userPurchases
  * @param othersPurchases
+ *
  * @returns {[]}
  */
 const generate = (userPurchases: IPurchases[], othersPurchases: IPurchases[]): IUserStats[] => {
@@ -79,6 +79,7 @@ const getAverageSpent = (othersPurchases: IPurchases[], merchantId: number): num
  *
  * @param userAmount
  * @param average
+ *
  * @returns {string|number}
  */
 const getPercentile = (userAmount: number, average: number): number => {

@@ -48,15 +48,15 @@ const groupBy = "GROUP BY merchant_id";
 /**
  * Get transactions by user
  *
- * @param request
+ * @param req
  * @returns {Promise<string|*>}
  */
-const getTransactionsByUser = (request) => __awaiter(void 0, void 0, void 0, function* () {
+const getTransactionsByUser = (req) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const rows = yield query_js_1.default.execute("SELECT merchant_id, sum(amount) as amount " +
             fromClause +
-            "WHERE user_id = " + request.params.id +
-            dateFilter(request.query.startDate, request.query.endDate) +
+            "WHERE user_id = " + req.params.id +
+            dateFilter(req.query.startDate, req.query.endDate) +
             groupBy);
         return rows;
     }
