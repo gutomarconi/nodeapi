@@ -20,7 +20,7 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "dotenv": "latest",
     "pg": "latest"
   }
